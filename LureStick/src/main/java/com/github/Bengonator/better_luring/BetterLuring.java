@@ -1,24 +1,20 @@
-package com.github.Bengonator.minecraft_mod_collection.better_hoppers;
+package com.github.Bengonator.better_luring;
 
-import com.github.Bengonator.minecraft_mod_collection.better_hoppers.init.ItemInit;
-import net.minecraft.client.Minecraft;
-import net.minecraft.network.chat.Component;
-import net.minecraft.world.entity.player.Player;
+import com.github.Bengonator.better_luring.init.ItemInit;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.entity.item.ItemEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
-@Mod(BetterHoppers.MODID)
-public class BetterHoppers
+@Mod(BetterLuring.MODID)
+public class BetterLuring
 {
-    public static final String MODID = "better_hoppers";
+    public static final String MODID = "better_luring";
 
-    public BetterHoppers()
+    public BetterLuring()
     {
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
