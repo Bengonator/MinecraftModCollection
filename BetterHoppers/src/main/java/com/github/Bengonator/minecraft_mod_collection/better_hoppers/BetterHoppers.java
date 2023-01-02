@@ -1,5 +1,6 @@
 package com.github.Bengonator.minecraft_mod_collection.better_hoppers;
 
+import com.github.Bengonator.minecraft_mod_collection.better_hoppers.init.ItemInit;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Player;
@@ -7,10 +8,11 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.item.ItemEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
-// The value here should match an entry in the META-INF/mods.toml file
 @Mod(BetterHoppers.MODID)
 public class BetterHoppers
 {
@@ -18,7 +20,11 @@ public class BetterHoppers
 
     public BetterHoppers()
     {
-        // Register ourselves for server and other game events we are interested in
+        final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ItemInit.ITEMS.register(modEventBus);
+
+
         MinecraftForge.EVENT_BUS.register(this);
     }
 
@@ -26,9 +32,11 @@ public class BetterHoppers
     public static class TestModEvents {
         @SubscribeEvent
         public static void onPlayerInteract(PlayerInteractEvent event) {
-            Player player = event.getEntity();
+//            System.out.println("You interacted with " + event.getItemStack());
 
-            player.sendSystemMessage(Component.literal("Your interacted with " + event.getItemStack()));
+
+//            Player player = event.getEntity();
+//            player.sendSystemMessage(Component.literal("You interacted with " + event.getItemStack()));
         }
     }
 }
