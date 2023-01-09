@@ -2,11 +2,8 @@ package com.github.Bengonator.better_luring;
 
 import com.github.Bengonator.better_luring.init.ModItems;
 import com.github.Bengonator.better_luring.items.LureStick;
-import net.minecraft.world.item.Item;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
