@@ -8,19 +8,18 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-public class ItemsInit {
+public class ModItems {
 	public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, BetterLuring.MODID);
 
-	// todo testen ob leerzeichen erlaubt sind im namen
-	public static final RegistryObject<Item> LURE_STICK = ITEMS.register("lure_stick",
-			() -> new LureStick((new Item.Properties()
-					.tab(CreativeModeTab.TAB_TOOLS)
+	public static final RegistryObject<Item> LURE_STICK = ITEMS.register("lure_stick", () ->
+		new LureStick((new Item.Properties()
+			.tab(CreativeModeTab.TAB_TOOLS)
 //					.durability(64)
-					.defaultDurability(100) // todo was das?
+			.defaultDurability(100) // todo was da unterschied?
 //					.craftRemainder() // wie bucket bei lava. wenn i zb an stick mach den ma mit zb essen befüllen muss
-					// dann kann i machen, dass ma den leeren stick griagt sobald de durability weg is
-					// natürli muss i dann crafting rezepte machen und ah schaun wegen dem, dass mei gegenstand ned breakt.
-			)));
+			// dann kann i machen, dass ma den leeren stick griagt sobald de durability weg is
+			// natürli muss i dann crafting rezepte machen und ah schaun wegen dem, dass mei gegenstand ned breakt.
+		)));
 
 
 }

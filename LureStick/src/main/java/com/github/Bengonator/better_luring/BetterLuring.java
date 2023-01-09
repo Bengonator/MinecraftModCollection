@@ -1,10 +1,10 @@
 package com.github.Bengonator.better_luring;
 
-import com.github.Bengonator.better_luring.init.ItemsInit;
-import net.minecraftforge.api.distmarker.Dist;
+import com.github.Bengonator.better_luring.init.ModItems;
+import com.github.Bengonator.better_luring.items.LureStick;
+import net.minecraft.world.item.Item;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.living.LivingEvent;
-import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -20,24 +20,9 @@ public class BetterLuring {
     public BetterLuring() {
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        ItemsInit.ITEMS.register(modEventBus);
+        ModItems.ITEMS.register(modEventBus);
 
-//        modEventBus.register(Lur);
         MinecraftForge.EVENT_BUS.register(this);
+        MinecraftForge.EVENT_BUS.register(LureStick.class);
     }
-
-//    @SubscribeEvent
-//    public static void onPlayerInteract(PlayerInteractEvent event) {
-//        System.out.println("You interacted with " + event.getItemStack());
-//
-////            Player player = event.getEntity();
-////            player.sendSystemMessage(Component.literal("You interacted with " + event.getItemStack()));
-//    }
-
-//    @SubscribeEvent
-//    public static void onLivingTickEvent(LivingEvent.LivingTickEvent event) {
-//        System.out.println("tic event");
-//
-//
-//    }
 }
