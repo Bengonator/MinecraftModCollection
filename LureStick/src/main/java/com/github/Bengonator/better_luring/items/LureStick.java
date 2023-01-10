@@ -45,6 +45,7 @@ public class LureStick extends Item {
 			} else {
 				// todo damit ma ned vom sound weglaufen kann, vllt lieber was kurzes nehmen. besonders weil dann ah ka problem is mit längere durations
 				//  vllt kurzer sound und dafür partikel während duration, somit keine probleme mit duration, und afoch partikel mitgeben, die an der blockpos gesetzt werden
+				// todo is sound nu da? habn nie gehört. aber lieber wegtun und dafür partikel, markeirt somit wo mobs hingehen
 				player.playSound(SoundEvents.PORTAL_AMBIENT, 1F, 1F); // todo sound entfernen? oder eben was kurzes machen
 				itemStack.setDamageValue(dmg + 1);
 
@@ -69,6 +70,7 @@ public class LureStick extends Item {
 					//  mob.getBrain().removeAllBehaviors();
 					//  mob.getBrain().setDefaultActivity(Activity.PANIC);
 					//  ghasts sind auch komiscch, vllt "alle" testen und jene einzeln debuggen und schaun ob goals exisitieren
+					//  was mit fische?
 
 					GoalSelector goalSelector = mob.goalSelector;
 
