@@ -19,6 +19,7 @@ public class ModItems {
 //					.craftRemainder() // wie bucket bei lava. wenn i zb an stick mach den ma mit zb essen befüllen muss
 			// dann kann i machen, dass ma den leeren stick griagt sobald de durability weg is
 			// natürli muss i dann crafting rezepte machen und ah schaun wegen dem, dass mei gegenstand ned breakt.
+			// crafting rezept und wie repairen
 		)));
 
 
