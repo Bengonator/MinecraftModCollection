@@ -44,6 +44,12 @@ Inhalt:
 ##### Lure Stick
 Durch das Umbennen des Lure Stick am Amboss kann ausgewählt, werden welche Mobs angelockt werden und welche nicht. Standardmäßg werden alle Mobs angelockt. Es gibt das Prinzip der White- oder Blacklist.
 ... freut mi nimma schreiben, soll wer von den andern machen, sonst komm ich auf 40 Stunden, und die kommen eh fix nimma auf 25 Stunden.
+//  default whitelist, falls 1. symbol '-' dann blacklist
+//  viel fehler versucht zu beheben, vor allem leerzeichen
+//  also dass abstände gehen
+//  oiso einfach der name den man sieht, somit gehts für jede sprache und ma braucht ned wither_skeleton oder so
+//  nametaged mobs hören auf name tag namen
+
 
 ---
 ### Kommentare der Autoren

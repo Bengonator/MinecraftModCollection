@@ -25,7 +25,7 @@ public class LureUtils {
 	//  speedModifier: afoch variable ändern
 	//  unbreaking mit ein berechnen
 	//  amount: wie viele folgen können. is wichtig falls ma 1000er mobs spawn. besseren namen überlegen für enchantment
-	public static final int duration = 4; // wegen 4s Länge vom sound
+	public static final int duration = 4;
 	public static final int range = 16;
 	public static final double speedModifier = 1.5;
 	public static final int amount = 4;
