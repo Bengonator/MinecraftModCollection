@@ -24,7 +24,9 @@ Nix geht (Tutorials für oft alte Versionen) --> __3h__ (Gesamt 10,5h)
 Scheiß drauf, einfach extenden und overriden.
 Hopper bzw Sorter ist Block+Entity --> schwer --> lieber einfach anfangen --> Item
 LureBlock war Idee --> LureStick --> sehr schwer, Mobs zu sagen wohin sie gehen sollen, ohne (wortwörtlich) Gehirn zu entfernen. (mob.getBrain().removeAllBehaviors();)
-Finally geht es bei meisten Mobs (außer die, mit neuer KI) --> __16,5h__ (Gesamt 27h)
+Finally geht es bei meisten Mobs (außer die, mit neuer KI) --> __21h__ (Gesamt 31,5h)
+(wsl nu minimal mehr, damit particle geht)
+
 
 Hoffe dass LureBlock dann leicht.
 Enchantments dürfen neue Teamkollegen machen.
