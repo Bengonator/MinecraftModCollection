@@ -1,8 +1,6 @@
 package com.github.Bengonator.better_luring.items;
 
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.Screen;
-import net.minecraft.client.particle.SimpleAnimatedParticle;
 import net.minecraft.commands.arguments.EntityAnchorArgument;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -11,29 +9,22 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionResultHolder;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.ai.goal.GoalSelector;
 import net.minecraft.world.entity.ai.goal.WrappedGoal;
 import net.minecraft.world.entity.ai.targeting.TargetingConditions;
-import net.minecraft.world.entity.npc.WanderingTrader;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
-import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
@@ -50,47 +41,61 @@ public class LureStick extends Item {
 
 		// + 1, so that there is some safety time between two uses of the item.
 		player.getCooldowns().addCooldown(this, ticksPerSec * duration + 1);
-		ItemStack itemStack = player.getItemInHand(interactionHand);
-		int takenDmg = itemStack.getDamageValue();
-		int remainingDmg = itemStack.getMaxDamage() - takenDmg;
+		final ItemStack itemStack = player.getItemInHand(interactionHand);
+		final int takenDmg = itemStack.getDamageValue();
+		final int remainingDmg = itemStack.getMaxDamage() - takenDmg;
 
-		double playerX = player.getX();
-		double playerY = player.getY();
-		double playerZ = player.getZ();
+		final double playerX = player.getX();
+		final double playerY = player.getY();
+		final double playerZ = player.getZ();
 
 		BlockHitResult hitResult = getPlayerPOVHitResult(level, player, ClipContext.Fluid.NONE);
-		double hitX = hitResult.getLocation().x;
-		double hitY = hitResult.getLocation().y;
-		double hitZ = hitResult.getLocation().z;
+		final double hitX = hitResult.getLocation().x;
+		final double hitY = hitResult.getLocation().y;
+		final double hitZ = hitResult.getLocation().z;
 
 		if (level.isClientSide) {
 			if (remainingDmg > 0) {
 
-				// todo wenn block drüber
-				//  was wenn seitlich oder sogar unten berühren?
-				//  wie mit non solids umgehen? einfach so wie jetzt, also innen spawnen?
-//				BlockState blockState = level.getBlockState(hitResult);
-				double offsetForTopOfBlock = 0;
-//				if (blockState.isSolidRender(level, hitResult)) {
-//					offsetForTopOfBlock = blockState.getShape(level, hitResult).max(Direction.Axis.Y, 0.5, 0.5) + 0.03125;
-//				}
+				float offsetValue = 0.25F;
+				float hitXOffset = 0;
+				float hitZOffset = 0;
 
-				Random rnd = new Random();
-				float spread = 0.2F;
-//				rnd.nextFloat(-spread, +spread)
+				BlockPos hitBlockPos = hitResult.getBlockPos();
+				Direction hitDirection = hitResult.getDirection();
+				if (!level.getBlockState(hitBlockPos).isAir()) {
+					switch (hitDirection) {
+						case NORTH -> hitZOffset = -offsetValue;
+						case EAST -> hitXOffset = offsetValue;
+						case SOUTH -> hitZOffset = offsetValue;
+						case WEST -> hitXOffset = -offsetValue;
+					}
+				}
 
-				RandomSource randomsource = level.getRandom();
-				for(int times = 0; times < 5; times++) {
-					for (int i = 0; i < 5; i++) {
+				RandomSource rnd = level.getRandom();
+				float spread = 0.1F;                        // spread of particles for x- and z-axis
+				int nParticles = 5;                         // amount of particles per particle-strain
+				for(int times = 0; times < 5; times++) {    // amount of particle-strains
+					for (int i = 0; i < nParticles; i++) {
 
 						level.addParticle(
+							// small short green particles
 							ParticleTypes.COMPOSTER,
-							hitX + i * rnd.nextFloat(-spread, +spread),
-							hitY + i * 0.2,
-							hitZ + i * rnd.nextFloat(-spread, +spread),
-							randomsource.nextGaussian() * 0.02,
-							randomsource.nextGaussian() * 0.02,
-							randomsource.nextGaussian() * 0.02);
+
+							// -spread till +spread
+							hitX + hitXOffset + (i * rnd.nextFloat() * spread) * (rnd.nextBoolean() ? -1 : +1),
+
+							// If the hitDirection
+							// 1/nParticles is the factor, which make the highest particle one block high.
+							hitY + (hitDirection == Direction.DOWN ? -1 : 0) + i * (1D/nParticles),
+
+							// -spread till +spread
+							hitZ + hitZOffset + (i * rnd.nextFloat() * spread) * (rnd.nextBoolean() ? -1 : +1),
+
+							// speed of particles
+							rnd.nextGaussian() * 0.02,      // x-axis
+							rnd.nextGaussian() * 0.02,      // y-axis
+							rnd.nextGaussian() * 0.02);     // z-axis
 					}
 				}
 			}
@@ -108,7 +113,7 @@ public class LureStick extends Item {
 				int affected = 0;
 				for (Mob mob : level.getNearbyEntities(Mob.class, tarCon, player, player.getBoundingBox().inflate(range))) {
 
-					if (affected == amount || affected == remainingDmg) break;
+					if (affected == amount || affected == remainingDmg || !mob.isAlive()) break;
 
 					/* If there is a custom name,
 					   create the White- or Blacklist

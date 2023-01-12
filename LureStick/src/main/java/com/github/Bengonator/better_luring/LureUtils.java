@@ -3,10 +3,10 @@ package com.github.Bengonator.better_luring;
 public class LureUtils {
 
 	// region constants
-	public static final int millisToSec = 1000;
+//	public static final int millisToSec = 1000;
 	public static final int ticksPerSec = 20;
-	public static final int millisPerTick = 1000 / ticksPerSec;
-	public static int tickEventDelayInMs = 500;
+//	public static final int millisPerTick = 1000 / ticksPerSec;
+//	public static int tickEventDelayInMs = 500;
 	// endregion constants
 
 	// region enchantment constants
