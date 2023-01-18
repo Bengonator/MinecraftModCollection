@@ -125,6 +125,7 @@ public class LureStick extends Item {
 
 						// region create White- or Blacklist
 						ArrayList<String> split = new ArrayList<>(List.of(itemStack.getHoverName().getString().trim().split(";")));
+						split.removeIf(String::isBlank);
 
 						String start = split.get(0);
 						boolean isWhitelist = true;
