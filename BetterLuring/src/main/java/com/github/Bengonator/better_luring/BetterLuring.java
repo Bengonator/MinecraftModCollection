@@ -20,6 +20,6 @@ public class BetterLuring {
         ModItems.ITEMS.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
-        MinecraftForge.EVENT_BUS.register(LureStick.class);
+//        MinecraftForge.EVENT_BUS.register(LureStick.class);
     }
 }
