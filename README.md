@@ -10,7 +10,11 @@ Inhalte:
 
 ---
 ### Installationsanleitung
-TODO: write Installationsanleitung mit jar kopieren von nach, und vllt compilen
+Im root-Verzeichnis befindet sich ein Ordner namens "JARs (simply put them in the mods folder)".
+Wie der Name vermuten lässt, beinhaltet dieser Ordner die fertigen compilierten JARs, der einzelnen Mods.
+Diese gehören dann in den 'mods'-Ordner im Minecraft-Verzeichnis kopiert oder verschoben.
+Dieser befindet sich meist unter "C:\Users\YOURUSERNAME\AppData\Roaming\.minecraft\mods".
+Sofern die Forge-Versionen zusammenpassen, steht einem nichts mehr im Weg und man kann genüsslich Minecraft spielen.
 
 ---
 ### Journey
@@ -23,6 +27,7 @@ Dort erfuhr ich das erste Mal von 'Mixin'. Durch Mixins ist es möglich, Java-By
 Dies erschien als die perfekte Möglichkeit, neue Funktionen zu implementieren, ohne viel Neues erstellen zu müssen.
 Durch einen kurzer Search nach "Minecraft Mixin" liefert Doktor Google direkt zwei Ergebnisse: einmal die SpongePowered-Mixin-GitHub-Seite und einmal die (stark unvollständige) Dokumentation dazu.
 Nach etwa dreieinhalb Stunden brach ich diesen Versuch ab, da meine Mod nicht einmal einen simplen Text printen konnte.
+<br>
 __Timeline:__
 - Sponge Mixins: 3,5h
 - __Gesamt: 3,5h__
@@ -33,6 +38,7 @@ Nach etwa vier Stunden, hatte ich wieder einen super Überblick über die (doch 
 Dazu gehören die diversen Packages für den eigenen Java-Code, die Ordner für resources und all die vielen JSON-Files, um die graphics und models richtig darstellen zu können.
 Besonders zeitaufwändig war die Suche nach den richtigen events, durch die ich auf die Interaktion zwischen Hoppers und Truhen manipulieren kann.
 Diese Suche war nicht nur zeitaufwändig, sondern schlussendlich auf vergebens.
+<br>
 __Timeline:__
 - Sponge Mixins: 3,5h
 - Forge Testen:  4,0h
@@ -43,6 +49,7 @@ Hier realisierte ich, dass seit kurzem, die Sponge-Mixins standardmäßig in For
 Mag zwar cool klingen, ist es auch. Naja, bis auf das, dass ich weitere drei Stunden probiert habe, mit Mixins zu arbeiten.
 Mein Code per se war zwar richtig, doch Mixins brauchen eine ganz spezielle Einbindung und Konfiguration.
 Da dies eben ein ganz neues Feature war, gab es kaum Dokumentationen, zumindest nicht für die aktuelle Version.
+<br>
 __Timeline:__
 - Sponge Mixins: 3,5h
 - Forge Testen:  4,0h
@@ -59,6 +66,7 @@ Man glaubt es nicht, aber es ist verdammt schwer einem sturen Esel zu sagen, woh
 Nein Spaß beiseite, Tiere haben in Minecraft tatsächlich eine komplexe Verhaltensweise, der Mob-Typ 'Dorfbewohner' sogar ein "AI-Brain".
 Nach 23,5 Stunden (ich arbeite meist in halben-Stunden-Blöcken), war der Lure Stick fertig. Nein, er war sogar perfektioniert.
 Von eigenen Textures, fantastischen Partikeleffekten, bis hin zur Schnittstelle für mögliche Enchantments ist alles dabei.
+<br>
 __Timeline:__
 - Sponge Mixins: 3,5h
 - Forge Testen:  4,0h
