@@ -20,7 +20,7 @@ public class LureUtils {
 	//  bzw allgemein natürlich irgendwass auslagern in config file
 	//   wenn array, dann private und getter machen. oder normal lassen? bzw setter und falls null dann wieder default
 	//  .
-	//  duration: so dass länger dir nachgehen. dann eben soubnd pitchen oder kurzer sound
+	//  duration: so dass länger dir nachgehen
 	//  range: afoch variable ändern
 	//  speedModifier: afoch variable ändern
 	//  unbreaking mit ein berechnen
