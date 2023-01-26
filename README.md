@@ -13,7 +13,7 @@ Inhalte:
 Im root-Verzeichnis befindet sich ein Ordner namens "JARs (simply put them in the mods folder)".
 Wie der Name vermuten lässt, beinhaltet dieser Ordner die fertigen compilierten JARs, der einzelnen Mods.
 Diese gehören dann in den 'mods'-Ordner im Minecraft-Verzeichnis kopiert oder verschoben.
-Dieser befindet sich meist unter "C:\Users\YOURUSERNAME\AppData\Roaming\.minecraft\mods".
+Dieser befindet sich meist unter "C:\Users\YOURUSERNAME\AppData\Roaming\\.minecraft\mods".
 Sofern die Forge-Versionen zusammenpassen, steht einem nichts mehr im Weg und man kann genüsslich Minecraft spielen.
 
 ---
