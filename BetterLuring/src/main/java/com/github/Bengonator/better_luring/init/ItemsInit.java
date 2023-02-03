@@ -8,11 +8,12 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-public class ModItems {
+public class ItemsInit {
+
 	public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, BetterLuring.MODID);
 
 	public static final RegistryObject<Item> LURE_STICK = ITEMS.register("lure_stick", () ->
-		new LureStick((new Item.Properties()
+		new LureStick(new Item.Properties()
 			.tab(CreativeModeTab.TAB_TOOLS)
 			// todo was der Unterschied der zwei durabilities?
 //					.durability(64)
@@ -23,7 +24,8 @@ public class ModItems {
 			//  natürli muss i dann crafting rezepte machen und ah schaun wegen dem, dass mei gegenstand ned breakt.
 
 			// todo crafting rezept und wie repairen
-		)));
+		)
+	);
 
 
 }
