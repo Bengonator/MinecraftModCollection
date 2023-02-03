@@ -1,3 +1,8 @@
 {
-  "item.better_luring.lure_stick": "Lure Stick"
+  "item.better_luring.lure_stick": "Lure Stick",
+
+  "enchantment.better_luring.duration": "Duration",
+  "enchantment.better_luring.amount": "Amount",
+  "enchantment.better_luring.range": "Range",
+  "enchantment.better_luring.speed": "Speed"
 }

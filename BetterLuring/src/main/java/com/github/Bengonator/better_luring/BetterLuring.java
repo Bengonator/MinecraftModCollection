@@ -1,7 +1,7 @@
 package com.github.Bengonator.better_luring;
 
-import com.github.Bengonator.better_luring.init.ModItems;
-import com.github.Bengonator.better_luring.items.LureStick;
+import com.github.Bengonator.better_luring.init.EnchantmentsInit;
+import com.github.Bengonator.better_luring.init.ItemsInit;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -17,9 +17,9 @@ public class BetterLuring {
     public BetterLuring() {
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        ModItems.ITEMS.register(modEventBus);
+        ItemsInit.ITEMS.register(modEventBus);
+        EnchantmentsInit.ENCHANTMENTS.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
-//        MinecraftForge.EVENT_BUS.register(LureStick.class);
     }
 }
