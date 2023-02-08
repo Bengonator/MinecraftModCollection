@@ -1,19 +1,15 @@
 package com.github.Bengonator.better_luring.items;
 
-import com.github.Bengonator.better_luring.init.EnchantmentsInit;
+import com.github.Bengonator.better_luring.inits.EnchantmentsInit;
 import net.minecraft.client.gui.screens.Screen;
-import net.minecraft.commands.arguments.EntityAnchorArgument;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.core.particles.*;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.Mob;
-import net.minecraft.world.entity.ai.goal.GoalSelector;
-import net.minecraft.world.entity.ai.goal.WrappedGoal;
 import net.minecraft.world.entity.ai.targeting.TargetingConditions;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -27,9 +23,8 @@ import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.*;
-import java.util.concurrent.Executors;
-import java.util.concurrent.TimeUnit;
+import java.util.ArrayList;
+import java.util.List;
 
 import static com.github.Bengonator.better_luring.LureUtils.*;
 
@@ -54,8 +49,8 @@ public class LureStick extends Item {
 		// endregion enchantment levels
 
 		// + 1, so that there is some safety time between two uses of the item.
-		int duration = durationEnchantment[durationLvl];
-		player.getCooldowns().addCooldown(this, ticksPerSec * duration + 1);
+		int duration = DURATION_ENCHANTMENT[durationLvl];
+		player.getCooldowns().addCooldown(this, TICKS_PER_SEC * duration + 1);
 
 		final int alreadyTakenDmg = itemStack.getDamageValue();
 		final int remainingDmg = itemStack.getMaxDamage() - alreadyTakenDmg;
@@ -89,32 +84,14 @@ public class LureStick extends Item {
 					}
 				}
 
-				rnd = level.getRandom();
-				float spread = 0.1F;                        // spread of particles for x- and z-axis
-				int nParticles = 5;                         // amount of particles per particle-strain
-				for(int times = 0; times < 5; times++) {    // amount of particle-strains
-					for (int i = 0; i < nParticles; i++) {
-
-						level.addParticle(
-							// small short green particles
-							ParticleTypes.COMPOSTER,
-
-							// -spread till +spread
-							hitX + hitXOffset + (i * rnd.nextFloat() * spread) * (rnd.nextBoolean() ? -1 : +1),
-
-							// If the Block is hit form below:
-							// 1/nParticles is the factor, which make the highest particle one block high.
-							hitY + (hitDirection == Direction.DOWN ? -1 : 0) + i * (1D/nParticles),
-
-							// -spread till +spread
-							hitZ + hitZOffset + (i * rnd.nextFloat() * spread) * (rnd.nextBoolean() ? -1 : +1),
-
-							// speed of particles
-							rnd.nextGaussian() * 0.02,      // x-axis
-							rnd.nextGaussian() * 0.02,      // y-axis
-							rnd.nextGaussian() * 0.02);     // z-axis
-					}
-				}
+				createLureParticles(level,
+					hitX + hitXOffset,
+					hitY + (hitDirection == Direction.DOWN ? -1 : 0),
+					hitZ + hitZOffset,
+					0,
+					5,
+					5
+				);
 			}
 			else {
 				player.playSound(SoundEvents.ITEM_BREAK, .5F, 1F);
@@ -134,9 +111,9 @@ public class LureStick extends Item {
 				int affectedAfterUnbreaking = 0;
 
 				// todo vllt ned afoch inflaten sondern zb mehr links rechts, aber weniger oben unten
-				for (Mob mob : level.getNearbyEntities(Mob.class, tarCon, player, player.getBoundingBox().inflate(rangeEnchantment[rangeLvl]))) {
+				for (Mob mob : level.getNearbyEntities(Mob.class, tarCon, player, player.getBoundingBox().inflate(RANGE_ENCHANTMENT[rangeLvl]))) {
 
-					if (affected == amountEnchantment[amountLvl] || affected == remainingDmg || !mob.isAlive()) break;
+					if (affected == AMOUNT_ENCHANTMENT[amountLvl] || affected == remainingDmg || !mob.isAlive()) break;
 
 					/* If there is a custom name,
 					   create the White- or Blacklist
@@ -188,35 +165,12 @@ public class LureStick extends Item {
 						affectedAfterUnbreaking++;
 					}
 
-					/*
-					 todo vllt villagers extra beobachten
-					  mob.getBrain().removeAllBehaviors();
-					  mob.getBrain().setDefaultActivity(Activity.PANIC);
-					  ghasts sind auch komiscch, vllt "alle" testen und jene einzeln debuggen und schaun ob goals exisitieren
-					*/
-
-					GoalSelector goalSelector = mob.goalSelector;
-
-					List<WrappedGoal> runningGoals = goalSelector.getRunningGoals().toList();
-					runningGoals.forEach(WrappedGoal::stop);
-
-					List<WrappedGoal> goals = goalSelector.getAvailableGoals().stream().toList();
-					goalSelector.removeAllGoals();
-
-					Executors.newSingleThreadScheduledExecutor().schedule(
-						() -> {
-							for (WrappedGoal goal : goals) {
-								goalSelector.addGoal(goal.getPriority(), goal.getGoal());
-							}
-						},
-						duration,
-						TimeUnit.SECONDS);
-
-					mob.lookAt(
-						EntityAnchorArgument.Anchor.EYES,
-						new Vec3(playerX, playerY, playerZ));
-
-					mob.getNavigation().moveTo(hitX, hitY, hitZ, speedEnchantment[speedLvl]);
+					lureMob(mob,
+						new Vec3(playerX, playerY, playerZ),
+						new Vec3(hitX, hitY, hitZ),
+						duration * 1000, // times 1000, as the time unit is milliseconds
+						SPEED_ENCHANTMENT[speedLvl]
+					);
 
 					itemStack.setDamageValue(alreadyTakenDmg + affectedAfterUnbreaking);
 					// endregion affect mobs
@@ -244,7 +198,6 @@ public class LureStick extends Item {
 		super.appendHoverText(itemStack, level, components, tooltipFlag);
 	}
 
-	// todo schauen dass ma alles auf lvl 3 haben kann
 	@Override
 	public int getEnchantmentValue(ItemStack stack) {
 		return 20;
