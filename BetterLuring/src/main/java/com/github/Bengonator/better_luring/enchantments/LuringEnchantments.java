@@ -1,6 +1,6 @@
 package com.github.Bengonator.better_luring.enchantments;
 
-import com.github.Bengonator.better_luring.init.ItemsInit;
+import com.github.Bengonator.better_luring.inits.ItemsInit;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentCategory;

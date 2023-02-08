@@ -1,4 +1,4 @@
-package com.github.Bengonator.better_luring.init;
+package com.github.Bengonator.better_luring.inits;
 
 import com.github.Bengonator.better_luring.BetterLuring;
 import com.github.Bengonator.better_luring.enchantments.LuringEnchantments;
