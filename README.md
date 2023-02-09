@@ -83,6 +83,7 @@ Obwohl viel in den Semesterferien zu erledigen war/ist, schaffte ich es innerhal
 - Range: der Umkreis indem Mobs angelockt werden können, wird vergößert
 - Speed: die Mobs bewegen sich schneller, während sie einem folgen
 - Unbreaking: das bereits exisitierende Enchantment hat eine Wirkung auf den Lure Stick
+Es ist möglich, alle Verzauberungen auf dem höchsten Level auf einen einzigen Lure Stick zu geben.
 <br>
 __Timeline:__
 - Sponge Mixins: 3,5h
@@ -90,7 +91,7 @@ __Timeline:__
 - Forge Mixins:  3,0h
 - Lure Stick:   23,5h
 - Enchantments:  3,0h
-- __Gesamt: 37__
+- __Gesamt: 37,0h__
 
 Im Vergleich zu den 23,5 Stunden war der Lure Block mit seinen 6,5 Stunden ja quasi ein Scherz.
 Dachte mir aber ehrlich gesagt, dass er viel schneller zu programmieren ist, da die Funktionalität ja einfach übernommen werden kann.
