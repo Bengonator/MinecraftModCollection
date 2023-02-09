@@ -83,6 +83,7 @@ Obwohl viel in den Semesterferien zu erledigen war/ist, schaffte ich es innerhal
 - Range: der Umkreis indem Mobs angelockt werden können, wird vergößert
 - Speed: die Mobs bewegen sich schneller, während sie einem folgen
 - Unbreaking: das bereits exisitierende Enchantment hat eine Wirkung auf den Lure Stick
+<br>
 Es ist möglich, alle Verzauberungen auf dem höchsten Level auf einen einzigen Lure Stick zu geben.
 <br>
 __Timeline:__
