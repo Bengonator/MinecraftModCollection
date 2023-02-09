@@ -201,6 +201,7 @@ Es ist möglich, alle Verzauberungen auf dem höchsten Level auf einen einzigen 
 - Range: der Umkreis indem Mobs angelockt werden können, wird vergößert
 - Speed: die Mobs bewegen sich schneller, während sie einem folgen
 - Unbreaking: das bereits exisitierende Enchantment hat eine Wirkung auf den Lure Stick
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 __Timeline:__
 - Sponge Mixins: 3,5h
 - Forge Testen:  4,0h
