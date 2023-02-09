@@ -17,10 +17,13 @@ import org.jetbrains.annotations.Nullable;
 
 public class LureBlock extends Block implements EntityBlock {
 
+<<<<<<< HEAD
 	// todo auch das mit white und blacklist auslagern und hier auch verwenden
 	//  enchantments am Block
 	//  was passiert wenn man die sprache ändert
 
+=======
+>>>>>>> 6b13f984118c90fef09b525af824c98179a80128
 	public LureBlock(Properties properties) {
 		super(properties);
 	}

@@ -24,8 +24,11 @@ public class LureBlockEntity extends BlockEntity {
 	public static <T extends BlockEntity> void tick(Level level, BlockPos blockPos, BlockState blockState, T blockEntity) {
 		LureBlockEntity lbEntity = (LureBlockEntity) blockEntity;
 
+<<<<<<< HEAD
 		if (!level.hasNeighborSignal(blockPos)) return;
 
+=======
+>>>>>>> 6b13f984118c90fef09b525af824c98179a80128
 		if (level.isClientSide) {
 			if (lbEntity.clientTimer < CLIENT_TICK_DELAY) {
 				lbEntity.clientTimer++;
@@ -52,7 +55,11 @@ public class LureBlockEntity extends BlockEntity {
 			}
 			lbEntity.serverTimer = 0;
 
+<<<<<<< HEAD
 			Vec3 vecCords = new Vec3(blockPos.getX(), blockPos.getY(), blockPos.getZ());
+=======
+			Vec3 vecCoords = new Vec3(blockPos.getX(), blockPos.getY(), blockPos.getZ());
+>>>>>>> 6b13f984118c90fef09b525af824c98179a80128
 			int affected = 0;
 			for (Mob mob : level.getEntitiesOfClass(Mob.class, new AABB(blockPos).inflate(BLOCK_RANGE))) {
 
@@ -60,8 +67,13 @@ public class LureBlockEntity extends BlockEntity {
 				affected++;
 
 				lureMob(mob,
+<<<<<<< HEAD
 					vecCords.add(0, 1, 0),     // look at the particles above the block
 					vecCords,
+=======
+					vecCoords.add(0, 1, 0),     // look at the particles above the block
+					vecCoords,
+>>>>>>> 6b13f984118c90fef09b525af824c98179a80128
 					BLOCK_DURATION, // milliseconds
 					BLOCK_SPEED
 				);
