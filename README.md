@@ -92,7 +92,7 @@ __Timeline:__
 - Forge Mixins:  3,0h
 - Lure Stick:   23,5h
 - Enchantments:  3,0h
-- __Gesamt: 37,0h__
+- __Gesamt: 37,5h__
 
 Im Vergleich zu den 23,5 Stunden war der Lure Block mit seinen 6,5 Stunden ja quasi ein Scherz.
 Dachte mir aber ehrlich gesagt, dass er viel schneller zu programmieren ist, da die Funktionalität ja einfach übernommen werden kann.
