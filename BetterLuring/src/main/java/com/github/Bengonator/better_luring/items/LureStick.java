@@ -14,6 +14,7 @@ import net.minecraft.world.entity.ai.targeting.TargetingConditions;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.ClipContext;
@@ -101,7 +102,7 @@ public class LureStick extends Item {
 			if (remainingDmg > 0) {
 
 				TargetingConditions tarCon = TargetingConditions.DEFAULT
-					// Todo, vllt des line of sight wegtun, dann nimmer des problem mit den underground mobs die reagieren,
+					// todo, vllt des line of sight wegtun, dann nimmer des problem mit den underground mobs die reagieren,
 					//  aber schaun, weil vllt gehts dann nd wenns weggedreht sind
 					//  spannend: hat irgendwie auch funktioniert, auch wenns i hinter blöcken versteckt war. vllt numoi testen
 					.ignoreLineOfSight()
@@ -201,5 +202,10 @@ public class LureStick extends Item {
 	@Override
 	public int getEnchantmentValue(ItemStack stack) {
 		return 20;
+	}
+
+	@Override
+	public boolean isValidRepairItem(ItemStack itemStackLeft, ItemStack itemStackRight) {
+		return itemStackRight.is(Items.GOLD_INGOT) || super.isValidRepairItem(itemStackLeft, itemStackRight);
 	}
 }
