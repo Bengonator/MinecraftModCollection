@@ -19,27 +19,20 @@ public class LureUtils {
 	public static final int TICKS_PER_SEC = 20;
 	public static final float MILLIS_TO_TICKS = TICKS_PER_SEC / 1000F;
 	public static final float OFFSET_TO_BLOCK_MIDDLE = 0.5F;
-
 	// endregion constants
 
 	// region enchantment settings
-	// todo:
-	//  in doku des enchantments erklären und nimma zu "future" tun
-	//  crafting recipies machen
-	//  texture verbessern oder was aus defaults herzaubern, so dass texture pack unabhängig is
-	//  enchantments:
-	//   theoretisch auslagern in config file und dann private machen und getter erstellen (glaub muss array kopieren, sonst useless)
-	//   enchanted books als items? dann darauf achten, dass ma zb nicht einen meiner enchants mit einem Rüstungs-Enchant hat, was useless wäre.
+	// todo: theoretisch auslagern in config file und dann private machen und getter erstellen (glaub muss array kopieren, sonst useless)
 
 	public static final Integer[] DURATION_ENCHANTMENT = new Integer[]{2, 4, 6, 8};
 	public static final Integer[] AMOUNT_ENCHANTMENT = new Integer[]{4, 8, 16, 32};
 	public static final Float[] RANGE_ENCHANTMENT = new Float[]{8F, 12F, 18F, 26F};
-	public static final Float[] SPEED_ENCHANTMENT = new Float[]{1.5F, 2F, 2.5F, 3F};
+	public static final Float[] SPEED_ENCHANTMENT = new Float[]{1.25F, 1.5F, 1.75F, 2F};
 	// endregion enchantment settings
 
 	// region block settings
 	public static final float CLIENT_TICK_DELAY = 0.25F * TICKS_PER_SEC;
-	public static final int BLOCK_DURATION = 1000; // milliseconds
+	public static final int BLOCK_DURATION = 500; // milliseconds
 	public static final int BLOCK_AMOUNT = AMOUNT_ENCHANTMENT[3];
 	public static final float BLOCK_RANGE = RANGE_ENCHANTMENT[1];
 	public static final float BLOCK_SPEED = 0.75F;
