@@ -75,7 +75,7 @@ __Timeline:__
 - __Gesamt: 34h__
 
 Nach einem Invest von 34 Stunden während meiner Weihnachtsferien, welcher nur deswegen so hoch sein konnte, weil ich wundersamerweise bereits vor den Ferien alle anstehenden Hausübungen bereits fertig hatte, musste dieses wunderbare Projekt vorerst gestoppt werden.
-...
+
 Dachste dir!
 Obwohl viel in den Semesterferien zu erledigen war/ist, schaffte ich es innerhalb 3 Stunden, die 4 (+1) Enchantments zu erstellen.
 - Duration: die Mobs folgen einem länger
