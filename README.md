@@ -77,6 +77,7 @@ __Timeline:__
 Nach einem Invest von 34 Stunden während meiner Weihnachtsferien, welcher nur deswegen so hoch sein konnte, weil ich wundersamerweise bereits vor den Ferien alle anstehenden Hausübungen bereits fertig hatte, musste dieses wunderbare Projekt vorerst gestoppt werden.
 
 Dachste dir!
+<br>
 Obwohl viel in den Semesterferien zu erledigen war/ist, schaffte ich es innerhalb 3 Stunden, die 4 (+1) Enchantments zu erstellen.
 - Duration: die Mobs folgen einem länger
 - Amount: mehr Mobs können einem folgen
@@ -190,3 +191,27 @@ Um aus meinem ersten Projekt zu zitieren:
 
 (To be honest, if I finish any of the university projects, it's probably this, as I might play Minecraft again somewhere in the future and then I can play with my own mod.)
 (Warum hab ich die Zeile oben auf Englisch geschrieben? Brain...)
+
+
+
+
+
+Dachste dir!
+<br>
+Obwohl viel in den Semesterferien zu erledigen war/ist, schaffte ich es innerhalb 3 Stunden, die 4 (+1) Enchantments zu erstellen.
+Es ist möglich, alle Verzauberungen auf dem höchsten Level auf einen einzigen Lure Stick zu geben.
+- Duration: die Mobs folgen einem länger
+- Amount: mehr Mobs können einem folgen
+- Range: der Umkreis indem Mobs angelockt werden können, wird vergößert
+- Speed: die Mobs bewegen sich schneller, während sie einem folgen
+- Unbreaking: das bereits exisitierende Enchantment hat eine Wirkung auf den Lure Stick
+<br>
+__Timeline:__
+- Sponge Mixins: 3,5h
+- Forge Testen:  4,0h
+- Forge Mixins:  3,0h
+- Lure Stick:   23,5h
+- Enchantments:  3,0h
+- __Gesamt: 37,5h__
+<br>
+<br>
