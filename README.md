@@ -32,6 +32,7 @@ __Timeline:__
 - Sponge Mixins: 3,5h
 - __Gesamt: 3,5h__
 <br>
+<br>
 
 Mein nächster Gedanke war: *"Lieber doch "normales" Forge, damit habe ich ja bereits etwas Erfahrung."*
 Also stürzte ich mich ins vertraute Land und begann wieder ein bisschen mit Forge herumzuspielen und alles wieder ein bisschen zu testen.
@@ -45,6 +46,7 @@ __Timeline:__
 - Forge Testen:  4,0h
 - __Gesamt: 7,5h__
 <br>
+<br>
 
 Als ich die ganzen vielen importierten Minecraft-Libraries betrachtete, viel mir auf, dass sowohl "Sponge" als auch "Mixin" vorkam.
 Hier realisierte ich, dass seit kurzem, die Sponge-Mixins standardmäßig in Forge enthalten sind.
@@ -57,6 +59,7 @@ __Timeline:__
 - Forge Testen:  4,0h
 - Forge Mixins:  3,0h
 - __Gesamt: 10,5h__
+<br>
 <br>
 
 Ich sollte in etwa 25 Stunden für dieses Projekt aufwänden.
@@ -77,17 +80,18 @@ __Timeline:__
 - Lure Stick:   23,5h
 - __Gesamt: 34h__
 <br>
+<br>
 
 Nach einem Invest von 34 Stunden während meiner Weihnachtsferien, welcher nur deswegen so hoch sein konnte, weil ich wundersamerweise bereits vor den Ferien alle anstehenden Hausübungen bereits fertig hatte, musste dieses wunderbare Projekt vorerst gestoppt werden.
-dot dot dot
+...
 Dachste dir!
 Obwohl viel in den Semesterferien zu erledigen war/ist, schaffte ich es innerhalb 3 Stunden, die 4 (+1) Enchantments zu erstellen.
+Es ist möglich, alle Verzauberungen auf dem höchsten Level auf einen einzigen Lure Stick zu geben.
 - Duration: die Mobs folgen einem länger
 - Amount: mehr Mobs können einem folgen
 - Range: der Umkreis indem Mobs angelockt werden können, wird vergößert
 - Speed: die Mobs bewegen sich schneller, während sie einem folgen
 - Unbreaking: das bereits exisitierende Enchantment hat eine Wirkung auf den Lure Stick
-Es ist möglich, alle Verzauberungen auf dem höchsten Level auf einen einzigen Lure Stick zu geben.
 <br>
 __Timeline:__
 - Sponge Mixins: 3,5h
@@ -96,6 +100,7 @@ __Timeline:__
 - Lure Stick:   23,5h
 - Enchantments:  3,0h
 - __Gesamt: 37,5h__
+<br>
 <br>
 
 Im Vergleich zu den 23,5 Stunden war der Lure Block mit seinen 6,5 Stunden ja quasi ein Scherz.
@@ -109,6 +114,7 @@ __Timeline:__
 - Enchantments:  3,0h
 - Lure Block:    6,5h
 - __Gesamt: 43,5h__
+<br>
 <br>
 
 Um das ganze auch im Survival Modus spielbar zu machen, habe ich abschließend noch die nötigen Extras eingefügt:
@@ -125,6 +131,7 @@ __Timeline:__
 - Lure Block:    6,5h
 - Recipes usw:   1,5h
 - __Gesamt: 45,0h__
+<br>
 <br>
 
 #### Future
