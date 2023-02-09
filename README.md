@@ -193,20 +193,7 @@ Um aus meinem ersten Projekt zu zitieren:
 (Warum hab ich die Zeile oben auf Englisch geschrieben? Brain...)
 
 
-
-<br>
-<br>
-<br>
-<br>
 ---
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-Dachste dir!
-<br>
 Obwohl viel in den Semesterferien zu erledigen war/ist, schaffte ich es innerhalb 3 Stunden, die 4 (+1) Enchantments zu erstellen.
 Es ist möglich, alle Verzauberungen auf dem höchsten Level auf einen einzigen Lure Stick zu geben.
 - Duration: die Mobs folgen einem länger
