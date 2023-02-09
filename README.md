@@ -136,6 +136,27 @@ __Timeline:__
 <br>
 <br>
 
+Zu guter letzt zählen wir noch alle etc Dinge zusammen, die sich so übers Projekt verteilt haben.
+Dazu gehört das Schreiben von eben genau dieser README.
+Weiters zählt auch noch das Erstellen der drei Showcase-Videos dazu.
+Ich bin kein Mann der kurzen Worte, deshalb haben die Videos eine gemeinsame Länge von 33 Minuten und 51 Sekunden.
+Wie komme ich dann auf 5 Stunden? Ehrlich gesagt war dass bisschen ein random-Wert, damit ich schön auf 50 Stunden komme.
+Vermutlich ist er aber gar nicht so falsch, denn ich habe viel zu viel Zeit damit verbracht, die Showcases vorzubereiten.
+Stichwort: Useless-Kuh-Lampen-Laufband 
+<br>
+__Timeline:__
+- Sponge Mixins: 3,5h
+- Forge Testen:  4,0h
+- Forge Mixins:  3,0h
+- Lure Stick:   23,5h
+- Enchantments:  3,0h
+- Lure Block:    6,5h
+- Recipes usw:   1,5h
+- Medien:        5,0h
+- __Gesamt: 50 Stunden!__
+<br>
+<br>
+
 #### Future
 Zurzeit entscheidet der Name des Lure Stick darüber, welche Mobs angelockt werden und welche nicht. Genaueres dazu in der Dokumentation.
 Es besteht die Idee, das Selectionsverfahren intuitiver und mehr 'Vanilla-like' zu machen, indem zum Beispiel per (Shift-)Linksclick gewisse Tierarten zum Filter hinzugefügt oder entfernt werden können.

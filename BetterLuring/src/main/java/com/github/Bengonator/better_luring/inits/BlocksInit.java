@@ -7,10 +7,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
-<<<<<<< HEAD
 import net.minecraft.world.level.block.SoundType;
-=======
->>>>>>> 6b13f984118c90fef09b525af824c98179a80128
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
@@ -26,15 +23,11 @@ public class BlocksInit {
 	public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, BetterLuring.MODID);
 
 	public static final RegistryObject<Block> LURE_BLOCK = BLOCKS.register("lure_block", () ->
-<<<<<<< HEAD
 		new LureBlock(
 			BlockBehaviour.Properties
 				.of(Material.STONE)
 				.sound(SoundType.STONE)
 				.strength(3.5F))
-=======
-		new LureBlock(BlockBehaviour.Properties.of(Material.METAL))
->>>>>>> 6b13f984118c90fef09b525af824c98179a80128
 	);
 
 	public static final RegistryObject<Item> LURE_BLOCK_ITEM = BLOCK_ITEMS.register("lure_block", () ->
