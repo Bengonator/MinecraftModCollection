@@ -215,3 +215,27 @@ __Timeline:__
 - __Gesamt: 37,5h__
 <br>
 <br>
+
+
+
+
+
+
+
+
+Um das ganze auch im Survival Modus spielbar zu machen, habe ich abschließend noch die nötigen Extras eingefügt:
+Sowohl für den Lure Stick als auch den Lure Block gibts es ein Craftin-Rezept.
+Der Lure Block kann am schnellsten mit Spitzhacken abgebaut werden.
+Der Lure Stick kann mit Gold Nuggets repariert werden.
+<br>
+__Timeline:__
+- Sponge Mixins: 3,5h
+- Forge Testen:  4,0h
+- Forge Mixins:  3,0h
+- Lure Stick:   23,5h
+- Enchantments:  3,0h
+- Lure Block:    6,5h
+- Recipes usw:   1,5h
+- __Gesamt: 45,0h__
+<br>
+<br>
