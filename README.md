@@ -72,24 +72,54 @@ __Timeline:__
 - Forge Testen:  4,0h
 - Forge Mixins:  3,0h
 - Lure Stick:   23,5h
-- __Gesamt: 35h__
+- __Gesamt: 34h__
 
-Nach einem Invest von 35 Stunden während meiner Weihnachtsferien, welcher nur deswegen so hoch sein konnte, da ich wundersamerweise bereits vor den Ferien alle anstehenden Hausübungen bereits fertig hatte, musste dieses wunderbare Projekt vorerst gestoppt werden.
+Nach einem Invest von 34 Stunden während meiner Weihnachtsferien, welcher nur deswegen so hoch sein konnte, weil ich wundersamerweise bereits vor den Ferien alle anstehenden Hausübungen bereits fertig hatte, musste dieses wunderbare Projekt vorerst gestoppt werden.
+...
+Dachste dir!
+Obwohl viel in den Semesterferien zu erledigen war/ist, schaffte ich es innerhalb 3 Stunden, die 4 (+1) Enchantments zu erstellen.
+- Duration: die Mobs folgen einem länger
+- Amount: mehr Mobs können einem folgen
+- Range: der Umkreis indem Mobs angelockt werden können, wird vergößert
+- Speed: die Mobs bewegen sich schneller, während sie einem folgen
+- Unbreaking: das bereits exisitierende Enchantment hat eine Wirkung auf den Lure Stick
+<br>
+__Timeline:__
+- Sponge Mixins: 3,5h
+- Forge Testen:  4,0h
+- Forge Mixins:  3,0h
+- Lure Stick:   23,5h
+- Enchantments:  3,0h
+- __Gesamt: 37__
+
+Im Vergleich zu den 23,5 Stunden war der Lure Block mit seinen 6,5 Stunden ja quasi ein Scherz.
+Dachte mir aber ehrlich gesagt, dass er viel schneller zu programmieren ist, da die Funktionalität ja einfach übernommen werden kann.
+<br>
+__Timeline:__
+- Sponge Mixins: 3,5h
+- Forge Testen:  4,0h
+- Forge Mixins:  3,0h
+- Lure Stick:   23,5h
+- Enchantments:  3,0h
+- Lure Block:    6,5h
+- __Gesamt: 43,5h__
+
+Um das ganze auch im Survival Modus spielbar zu machen, habe ich abschließend noch die nötigen Extras eingefügt:
+Sowohl für den Lure Stick als auch den Lure Block gibts es ein Craftin-Rezept.
+Der Lure Block kann am schnellsten mit Spitzhacken abgebaut werden.
+Der Lure Stick kann mit Gold Nuggets repariert werden.
+<br>
+__Timeline:__
+- Sponge Mixins: 3,5h
+- Forge Testen:  4,0h
+- Forge Mixins:  3,0h
+- Lure Stick:   23,5h
+- Enchantments:  3,0h
+- Lure Block:    6,5h
+- Recipes usw:   1,5h
+- __Gesamt: 45,0h__
 
 #### Future
-Es ist geplant, einen Lure Block zu erstellen, welcher im Prinzip wie der Lure Stick funktioniert.
-Aber anstatt dynamisch die Zielposition bestimmen zu können, werden die Tiere fortlaufend zu dem Block gelockt.
-Da der Block im Vergleich zum Stick keinen Cooldown hat, dient er einfach einer anderen Funktion.
-Mit dem Stick kann man Mobs an eine gewünschte Stelle locken, zum Beispiel in einen Stall.
-Der Block ist vor Allem in Mobfarms sehr sinnvoll, um alle Tiere zu sortieren. Welche grausamen Taten danach begangen werden, ist jedem selbst überlassen.
-
-Ideen für Enchantments sind:
-- amount: mehr Mobs können einem folgen
-- duration: die Mobs folgen einem länger
-- range: der Umkreis indem Mobs angelockt werden können wird vergößert
-- speedModifier: die Mobs bewegen sich schneller während sie einem folgen
-- unbreaking: das bereits exisitierende Enchantment soll eine Wirkung auf das Item haben
-
 Zurzeit entscheidet der Name des Lure Stick darüber, welche Mobs angelockt werden und welche nicht. Genaueres dazu in der Dokumentation.
 Es besteht die Idee, das Selectionsverfahren intuitiver und mehr 'Vanilla-like' zu machen, indem zum Beispiel per (Shift-)Linksclick gewisse Tierarten zum Filter hinzugefügt oder entfernt werden können.
 
@@ -100,7 +130,7 @@ Natürlich ist auch der Hopper/Sorter geplant, doch der Aufwand ist zurzeit noch
 Inhalt:
 - Better Luring
   - Lure Stick
-  - (Lure Block)
+  - Lure Block
 - (Better Hoppers)
   - (Filtering)
   - (Piping)
@@ -133,6 +163,17 @@ Habe ich zum Beispiel Minecraft auf Deutsch eingestellt, müsste ich "Kuh" und "
 Durch die Verwendung des 'display name', kann auch Filter auf einzelne Mobs gelegen werden.
 Indem man ein Nametag in einem Ambos benennt und dann ein Mob mit dem Nametag umbenennt, ändert sich dessen 'display name'.
 Somit kann man zum Beispiel ein Mob 'Max's grüner Weihnachtsfrosch nennen' und da dies ein einzigartiger 'display name' ist, folgt einem nur dieses Mob.
+
+##### Lure Block
+Der Lure Block funktioniert im Prinzip wie der Lure Stick.
+Aber anstatt dynamisch die Zielposition bestimmen zu können, werden die Tiere fortlaufend zu dem Block gelockt.
+Da der Block im Vergleich zum Stick keinen Cooldown hat, dient er einfach einer anderen Funktion.
+Mit dem Stick kann man Mobs an eine gewünschte Stelle locken, zum Beispiel in einen Stall.
+Der Block ist vor Allem in Mobfarms sehr sinnvoll, um alle Tiere zu sortieren. Welche grausamen Taten danach begangen werden, ist jedem selbst überlassen.
+
+Der Lure Block benötigt ein Redstone-Signal, um Mobs anzulocken.
+Weder Enchantments, noch das Erstellen von Filtern ist möglich.
+Wird eventuell in Zukunft hinzugefügt.
 
 ---
 ### Kommentare des Autors
