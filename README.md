@@ -178,7 +178,7 @@ Weder Enchantments, noch das Erstellen von Filtern ist möglich.
 Wird eventuell in Zukunft hinzugefügt.
 
 ---
-### Kommentare des Autors
+### Kommentar des Autors
 *"Im Großen und Ganzen würde ich auch dieses Projekt als einen riesen Erfolg betrachten.
 Einerseits habe ich mir den Traum erfüllt, endlich meine eigene Minecraft-Mod zu programmieren.
 Noch dazu eine sinnvolle, die mit großen Informatik-Themen zu tun hat. Sortieren, Gruppieren, Aussortieren, Ordnen, ...
