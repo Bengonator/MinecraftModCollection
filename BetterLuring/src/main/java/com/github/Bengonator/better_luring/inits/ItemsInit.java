@@ -14,7 +14,6 @@ public class ItemsInit {
 
 	public static final RegistryObject<Item> LURE_STICK = ITEMS.register("lure_stick", () ->
 		new LureStick(new Item.Properties()
-			.tab(CreativeModeTab.TAB_TOOLS)
 			.defaultDurability(100)
 		)
 	);

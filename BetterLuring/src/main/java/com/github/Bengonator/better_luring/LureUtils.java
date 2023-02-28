@@ -93,7 +93,7 @@ public class LureUtils {
 		runningGoals.forEach(WrappedGoal::stop);
 
 		List<WrappedGoal> goals = goalSelector.getAvailableGoals().stream().toList();
-		goalSelector.removeAllGoals();
+		goalSelector.removeAllGoals(goal -> true);
 
 		Executors.newSingleThreadScheduledExecutor().schedule(
 			() -> {
