@@ -31,9 +31,7 @@ public class BlocksInit {
 	);
 
 	public static final RegistryObject<Item> LURE_BLOCK_ITEM = BLOCK_ITEMS.register("lure_block", () ->
-		new BlockItem(LURE_BLOCK.get(), new Item.Properties()
-			.tab(CreativeModeTab.TAB_REDSTONE)
-		)
+		new BlockItem(LURE_BLOCK.get(), new Item.Properties())
 	);
 
 	@SuppressWarnings("DataFlowIssue")
