@@ -7,7 +7,7 @@ import net.minecraft.world.item.enchantment.EnchantmentCategory;
 
 public class LuringEnchantments extends Enchantment {
 
-	static EnchantmentCategory LURE_STICK_CATEGORY = EnchantmentCategory.create("lure_stick", item -> item == ItemsInit.LURE_STICK.get());
+	static final EnchantmentCategory LURE_STICK_CATEGORY = EnchantmentCategory.create("lure_stick", item -> item == ItemsInit.LURE_STICK.get());
 
 	public LuringEnchantments(Rarity rarity) {
 		super(rarity, LURE_STICK_CATEGORY, new EquipmentSlot[]{EquipmentSlot.MAINHAND, EquipmentSlot.OFFHAND});
