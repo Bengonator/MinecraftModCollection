@@ -4,7 +4,6 @@ import com.github.Bengonator.better_luring.BetterLuring;
 import com.github.Bengonator.better_luring.blocks.LureBlock;
 import com.github.Bengonator.better_luring.blocks.block_entities.LureBlockEntity;
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
@@ -17,10 +16,10 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class BlocksInit {
 
-	public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, BetterLuring.MODID);
-	public static final DeferredRegister<Item> BLOCK_ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, BetterLuring.MODID);
+	public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, BetterLuring.MOD_ID);
+	public static final DeferredRegister<Item> BLOCK_ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, BetterLuring.MOD_ID);
 
-	public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, BetterLuring.MODID);
+	public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, BetterLuring.MOD_ID);
 
 	public static final RegistryObject<Block> LURE_BLOCK = BLOCKS.register("lure_block", () ->
 		new LureBlock(
